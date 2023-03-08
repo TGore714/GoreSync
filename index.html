@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="keywords" content="resume, Tyler, Gore, Tyler Gore, software developer, independent software developer"
+    <meta name="discription" content="Tyler Gore personal website and resume"
+    <meta name="author" content="Tyler Gore"
+    <meta http-equiv="refresh" content="30"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+    /* background image */
+    body {background-image: url("https://cdn.wallpapersafari.com/12/49/e1HDgu.jpg");
+    background-repeat: no-repeat; 
+    background-position:top;}
+    
+    * {box-sizing: border-box}
+
+    /* Style the header */
+.header {
+  background-image: linear-gradient(to bottom right, rgb(64, 64, 64), black);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+position: sticky;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color:black;
+  color:whitesmoke;
+}
+
+h1{text-align: center; color: white; font-family: 'Cinzel', serif;
+}
+.header {
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+  padding: 10px;
+}
+
+/* Left column*/
+.column.left{
+  width: 25%;
+  float: left;
+}
+/*right column*/
+.column.right{
+  width: 25%;
+  float: right;
+}
+/* Middle column */
+.column.middle {
+  width: 50%;
+  float: right;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.middle {
+    width: 100%;
+    align-items: center;
+  }
+}
+.footer{
+  background-color: rgb(64, 64, 64);
+  color: #f2f2f2;
+  position: fixed;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>
+   <img style="width:275px;height:400px; float: left;" src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/306080121_5325274434256791_394728239993333317_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=WlHpVi4gGBUAX85jfgh&_nc_ht=scontent-dfw5-2.xx&oh=00_AfCYuIzD5QF0i_lGPLEdQrA6mbiyDLy56mwKtrQXFaot-w&oe=6407ACB1" alt="image of Tyler">
+   Learn More About Tyler Gore
+  </h1>
+</div>
+
+<div class="topnav">
+  <a href="#">Home</a>
+  <a href="#">About me</a>
+  <a href="#">qualifications</a>
+  <a href="#">contact me</a>
+</div>
+<div>
+  <h2 style="color: white;">
+    Hello, my name is Tyler Gore. I am currently an independent software developer <br> as well as an EMT. let me tell you more about how I got to where I am now. 
+  </h2>
+</div>
+<div class="row" style="color: white;">
+  <div class="column right">
+    <h2>Want a website for your business? fill out this form to get into contact.</h2>
+    <p>
+      <form type="hidden" action="https://formsubmit.co/tylergore11@gmail.com" method="POST" target="_blank">
+        <input style="background-color: lightgrey;" type="text" name="fname" placeholder="first name" required>
+        <input style="background-color: lightgrey;" type="text" name="lname" placeholder="last name" required>
+        <textarea style="background-color:lightgray;" cols="50" rows="4" type="text" name="info" placeholder="Your Website & Business Detalils" required></textarea>
+        <input style=background-color:lightgray type="email" name="email" placeholder="email" required>
+        <button style="background-color: lightgrey;" type="submit">Submit</button>
+   </form>
+  </p>
+  </div>
+  
+  <div class="column middle" style="color: white;">
+    <h2>About Me</h2>
+     <p>
+     Hello, my name is Tyler Gore, and I am a proficient independent software developer and an accomplished EMT. Shortly after graduating from high school, I pursued EMT training at VoTech. During my studies, I concurrently held a position as a gymnastics coach and selflessly volunteered as a firefighter. After completing EMT school, I secured a position as an EMT and served in this capacity for two years before meeting my significant other. We subsequently tied the knot within a year and expeditiously relocated to Texas. It was during this time that I discovered my passion for software development and commenced my online learning journey under the guidance of seasoned software engineers.
+
+While in the process of obtaining my Texas state EMS license, I began my career at Amazon as a driver. Upon successfully receiving my EMS license, I returned to the EMS field and worked as an EMT while also collaborating on software projects for my personal clientele. I remain committed to both software development and the EMS industry, and continue to find fulfillment in both arenas. 
+     </p>
+  </div>
+  
+  <div class="column left" style="color: white;">
+    <h2>Follow me on social media</h2>
+    <p>
+      <a href="https://www.facebook.com/tyler.gore.587"><button>facebook</button></a>
+      <a href="https://www.instagram.com/tyler_gore714/"><button>instagram</button></a>
+      <a href="https://www.linkedin.com/in/tyler-gore714/"><button>linkedin</button></a>
+   </p>
+  </div>
+</div>
+<div class="footer">
+  <h3>
+    contact me <br>
+    email: tylergore11@gmail.com <br>
+  </h3>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://appwrite.io/js/sdk/latest/appwrite.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Create an account to get started.</p>
+        <form id="signup-form" action="/signup" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="C:\Users\tyler\OneDrive\Documents\index.html\GoreSync-appwrite\signin.html">Log in here</a>.</p>
+    </div>
+    <script>const appwrite = new window.Appwrite();
+
+        appwrite
+          .setEndpoint('https://cloud.appwrite.io/v1') // Replace with your API endpoint
+          .setProject('64cdbe2ac6cfd85658f1'); // Replace with your project ID
+        
+        // JavaScript for sign-up page
+
+const signupForm = document.getElementById('signup-form');
+
+signupForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(signupForm);
+
+  const username = formData.get('username');
+  const email = formData.get('email');
+  const password = formData.get('password');
+
+  try {
+    const response = await appwrite.account.create(email, password, username);
+    console.log('User account created:', response);
+    // Redirect or show success message
+  } catch (error) {
+    console.error('Sign up failed:', error);
+    // Display error message to the user
+  }
+});
+
+        
+        </script>
+  
+</body>
+</html>

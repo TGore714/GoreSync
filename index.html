@@ -1,162 +1,191 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="keywords" content="resume, Tyler, Gore, Tyler Gore, software developer, independent software developer"
-    <meta name="discription" content="Tyler Gore personal website and resume"
-    <meta name="author" content="Tyler Gore"
-    <meta http-equiv="refresh" content="30"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
-
+  <head>
+    <title>GoreSync Vile News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <style>
-    /* background image */
-    body {background-image: url("https://cdn.wallpapersafari.com/12/49/e1HDgu.jpg");
-    background-repeat: repeat-y; 
-    background-position:top;}
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     
-    * {box-sizing: border-box}
+    .buttonrt {
+      float: right;
+      border-radius: 10px;
+      background-color: black;
+      color: white;
+    }
+    </style>
+  </head>
+<body class="w3-light-grey">
 
-    /* Style the header */
-.header {
-  background-image: linear-gradient(to bottom right, rgb(64, 64, 64), black);
-  padding: 20px;
-  text-align: center;
-}
-
-/* Style the top navigation bar */  
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color:black;
-  color:whitesmoke;
-}
-
-h1{text-align: center; color: white; font-family: 'Cinzel', serif;
-}
-.header {
-  background-color: black;
-  text-align: center;
-  padding: 20px;
-}
-/* Create three unequal columns that floats next to each other */
-.column {
-  padding: 10px;
-}
-
-/* Left column*/
-.column.left{
-  width: 25%;
-  float: left;
-}
-/*right column*/
-.column.right{
-  width: 25%;
-  float: right;
-}
-/* Middle column */
-.column.middle {
-  width: 50%;
-  float: right;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.middle {
-    width: 100%;
-    align-items: center;
-  }
-}
-.footer{
-  background-color: rgb(64, 64, 64);
-  color: #f2f2f2;
-  position: fixed;
-}
-</style>
-</head>
-<body>
-<div class="header">
-  <h1>
-   <img style="width:275px;height:400px; float: left;" src="https://raw.githubusercontent.com/TGore714/personal-website/main/IMG_714.JPG" alt="image of Tyler">
-   Learn More About Tyler Gore
-  </h1>
-</div>
-
-<div class="topnav">
-  <a href="#">Home</a>
-  <a href="#">About me</a>
-  <a href="#">qualifications</a>
-  <a href="#">contact me</a>
-</div>
-<div>
-  <h2 style="color: white;">
-    Hello, my name is Tyler Gore. I am currently an independent software developer <br> as well as an EMT. let me tell you more about how I got to where I am now. 
-  </h2>
-</div>
-<div class="row" style="color: white;">
-  <div class="column right">
-    <h2>Want a website for your business? fill out this form to get into contact.</h2>
-    <p>
-      <form type="hidden" action="https://formsubmit.co/tylergore11@gmail.com" method="POST" target="_blank">
-        <input style="background-color: lightgrey;" type="text" name="fname" placeholder="first name" required>
-        <input style="background-color: lightgrey;" type="text" name="lname" placeholder="last name" required>
-        <textarea style="background-color:lightgray;" cols="50" rows="4" type="text" name="info" placeholder="Your Website & Business Detalils" required></textarea>
-        <input style=background-color:lightgray type="email" name="email" placeholder="email" required>
-        <button style="background-color: lightgrey;" type="submit">Submit</button>
-   </form>
-  </p>
-  </div>
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+<br>
+  <div id="account-name"></div>
+  <button class="buttonrt"><a style="text-decoration: none;" href="C:\Users\tyler\OneDrive\Documents\index.html\GoreSync-appwrite\signin.html">Sign In</a></button>
+  <button class="buttonrt"><a style="text-decoration: none;" href="C:\Users\tyler\OneDrive\Documents\index.html\GoreSync-appwrite\signup.html">Create an Account</a></button>
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
   
-  <div class="column middle" style="color: white;">
-    <h2>About Me</h2>
-     <p>
-     Hello, my name is Tyler Gore, and I am a proficient independent software developer and an accomplished EMT. Shortly after graduating from high school, I pursued EMT training at VoTech. During my studies, I concurrently held a position as a gymnastics coach and selflessly volunteered as a firefighter. After completing EMT school, I secured a position as an EMT and served in this capacity for two years before meeting my significant other. We subsequently tied the knot within a year and expeditiously relocated to Texas. It was during this time that I discovered my passion for software development and commenced my online learning journey under the guidance of seasoned software engineers.
+  <h1><b>GoreSync Vile News</b></h1>
+  <p> The Evil actions of the <span class="w3-tag">Reprobates</span></p>
 
-While in the process of obtaining my Texas state EMS license, I began my career at Amazon as a driver. Upon successfully receiving my EMS license, I returned to the EMS field and worked as an EMT while also collaborating on software projects for my personal clientele. I remain committed to both software development and the EMS industry, and continue to find fulfillment in both arenas. To this day I have multiple websites a client of my own of which I built and manage a website from the ground up called rnsssbbq.com.
-     </p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="https://www.w3schools.com/w3images/woods.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container">
+      <h3><b>TITLE HEADING</b></h3>
+      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments </b> <span class="w3-tag">0</span></span></p>
+        </div>
+      </div>
+    </div>
   </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="https://www.w3schools.com/w3images/bridge.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>BLOG ENTRY</b></h3>
+      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments</b> <span class="w3-badge">2</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="https://images.paramount.tech/uri/mgid:arc:imageassetref:logotv.com:75d6e2d1-eb45-11ec-b047-02e53f0256a7?quality=0.7&gen=ntrn&legacyStatusCode=true" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>Reprobate</b></h4>
+      <p>noun <br><br>
+        1. a depraved, unprincipled, or wicked person:
+        a drunken reprobate.
+        
+       2. a person rejected by God and beyond hope of salvation.
+        <hr>
+        adjective
+        <br><br>
+        1. morally depraved; unprincipled; bad.
+        
+        2. rejected by God and beyond hope of salvation.
+        <hr>
+        verb <br><br>
+        
+        (used with object),rep·ro·bat·ed, rep·ro·bat·ing.
+        1. to disapprove, condemn, or censure.
+        
+        2. (of God) to reject (a person), as for sin; exclude from the number of the elect or from salvation.</p>
+    </div>
+    <button style="border-radius: 10px; background-color: black; color: white;"><a style="text-decoration: none;" href="https://www.dictionary.com/browse/reprobate">Source</a></button>
+  </div><hr>
   
-  <div class="column left" style="color: white;">
-    <h2>Follow me on social media</h2>
-    <p>
-      <a href="https://www.facebook.com/tyler.gore.587"><button>facebook</button></a>
-      <a href="https://www.instagram.com/tyler_gore714/"><button>instagram</button></a>
-      <a href="https://www.linkedin.com/in/tyler-gore714/"><button>linkedin</button></a>
-   </p>
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="https://www.w3schools.com/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="https://www.w3schools.com/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="https://www.w3schools.com/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="https://www.w3schools.com/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>  
+    </ul>
   </div>
+  <hr> 
+ 
+<!-- END Introduction Menu -->
 </div>
-<div class="footer">
-  <h3>
-    contact me <br>
-    email: tylergore11@gmail.com <br>
-  </h3>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END content -->
 </div>
-</div>
+
+<script>
+  const client = new Client();
+
+client
+    .setEndpoint('https://cloud.appwrite.io/v1')
+    .setProject('64cdbe2ac6cfd85658f1');
+
+// After successful login
+const response = await appwrite.account.createSession(identifier, password);
+localStorage.setItem('appwriteToken', response.jwt);
+
+const appwriteToken = localStorage.getItem('appwriteToken');
+if (appwriteToken) {
+  // The user is logged in, fetch their account details
+  appwrite
+    .setProject('64cdbe2ac6cfd85658f1')
+    .setEndpoint('https://api.appwrite.io/v1')
+    .setJWT(appwriteToken);
+
+  appwrite.account.get().then((account) => {
+    const accountName = account.name; // Replace 'name' with the property that holds the user's name in your Appwrite project
+    displayAccountName(accountName); // Function to display the account name on the website
+  });
+}
+
+function displayAccountName(name) {
+  const accountNameElement = document.getElementById('account-name');
+  accountNameElement.textContent = `Welcome, ${name}!`;
+}
+
+</script>
 
 </body>
 </html>
+

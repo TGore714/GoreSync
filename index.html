@@ -27,6 +27,13 @@
             
         </nav>
     </header>
+
+    <div class="popup-container">
+        <div class="popup">
+            <p>This is a custom message.</p>
+            <button id="close-popup">OK</button>
+        </div>
+    </div>
     
     <section class="hero">
         <div class="container">
@@ -35,7 +42,7 @@
             <a href="C:\Users\tyler\valuations.html" class="btn">Get Started</a>
         </div>
     </section>
-
+    
     <footer>
         <p>&copy; 2023 Goresync.com. All rights reserved.</p>
     </footer>
@@ -48,6 +55,20 @@ const navList = document.querySelector('.nav-list');
 menuToggle.addEventListener('click', function() {
     navList.classList.toggle('active');
 });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const popupContainer = document.querySelector('.popup-container');
+    const closePopupButton = document.querySelector('#close-popup');
+
+    // Show the pop-up when the page loads
+    popupContainer.style.visibility = 'visible';
+
+    // Close the pop-up when the button is clicked
+    closePopupButton.addEventListener('click', function () {
+        popupContainer.style.visibility = 'hidden';
+    });
+});
+
     </script>
 </body>
 </html>

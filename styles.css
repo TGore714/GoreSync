@@ -1,0 +1,272 @@
+/* Reset some default styling */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    height: 50px;
+    width: 160px;
+}
+
+nav li {
+    margin: 0 3rem;
+}
+
+nav ul :hover {
+    background-color: lightslategray;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('https://guitar.com/wp-content/uploads/2022/06/Taylor-Koa-722ce-HERO@2560x1625.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.valuation-section {
+    padding: 3rem 0;
+}
+
+.valuation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.guitar-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.guitar-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.guitar-card p {
+    font-weight: bold;
+}
+
+.gtrbutton {
+    background-color: #590000;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px 20px 10px 20px;
+    color: #fcfcfc;
+    border: none;
+}
+
+.gtrbutton:hover {
+    background-color: #a60000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+.value {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+}
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #4f4f4f;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+input[type="number"],
+select {
+    width: 96.5%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4f4f4f;
+    border-radius: 3px;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('down-arrow.png') no-repeat right center; /* arrow image or a font icon */
+    background-size: 20px; /* Adjust the size of the arrow icon */
+    color: #333;
+}
+
+select option {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Styling for when an option is hovered or selected */
+select:hover {
+    border-color: #555;
+}
+
+select:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Styling for when an option is hovered or selected */
+select option:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+
+#valuation-result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    font-size: 18px;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px 0;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+        padding: 1rem 0;
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .nav-list a {
+        padding: 1rem 2rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}

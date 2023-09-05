@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goresync - Your Ultimate Guitar Valuation Resource</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="C:\Users\tyler\index.html">Goresync</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="C:\Users\tyler\index.html"><button>Home</button></a></li>
+                <li><a href="C:\Users\tyler\listings.html"><button>Listings</button></a></li>
+                <li><a href="C:\Users\tyler\valuations.html"><button>Valuation</button></a></li>
+                <li><a href="C:\Users\tyler\about.html"><button>About</button></a></li>
+                <li><a href="C:\Users\tyler\contact.html"><button>Contact</button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1 class="value">Guitar Valuation Form</h1>
+        <form id="valuation-form">
+        <select id="guitar-type" name="guitar-type" required>
+            <option value="Electric">Electric</option>
+            <option value="Acoustic">Acoustic</option>
+        </select>
+        
+        <label for="guitar_make">Guitar Make:</label>
+        <input type="text" id="guitar_make" name="guitar_make" required><br><br>
+        
+        <label for="guitar_model">Guitar Model:</label>
+        <input type="text" id="guitar_model" name="guitar_model" required><br><br>
+        
+        <label for="guitar_year">Guitar Year:</label>
+        <input type="number" id="guitar_year" name="guitar_year" min="1900" max="2023" required><br><br>
+        
+        <label for="guitar_condition">Guitar Condition:</label>
+        <select id="guitar_condition" name="guitar_condition" required>
+            <option value="excellent">Excellent</option>
+            <option value="very_good">Very Good</option>
+            <option value="good">Good</option>
+            <option value="fair">Fair</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+        
+        
+        <input type="submit" value="Get Valuation">
+    </form>
+    <div id="valuation-result"></div>
+</section>
+
+    <footer>
+        <p>&copy; 2023 Goresync.com. All rights reserved.</p>
+    </footer>
+    <script>
+        // Select the menu toggle button and navigation list
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+// Add a click event listener to the menu toggle button
+menuToggle.addEventListener('click', function() {
+    navList.classList.toggle('active');
+});
+   
+    // Function to calculate and display the valuation
+    function calculateValuation() {
+        // Get form input values
+        const guitarType = document.getElementById('guitar-type').value;
+        const guitarMake = document.getElementById('guitar_make').value;
+        const guitarModel = document.getElementById('guitar_model').value;
+        const guitarYear = parseInt(document.getElementById('guitar_year').value);
+        const guitarCondition = document.getElementById('guitar_condition').value;
+
+        // Calculate the valuation (replace this with correct valuation logic)
+        // This is just a placeholder calculation
+        const valuation = 500 + (guitarYear * 2);
+
+
+        // Display the valuation result
+        const resultDiv = document.getElementById('valuation-result');
+        resultDiv.innerHTML = `<p>Your ${guitarType} guitar (${guitarMake} ${guitarModel}, ${guitarYear}, ${guitarCondition} condition) is valued at $${valuation}.</p>`;
+    }
+
+    // Add a submit event listener to the form
+    const valuationForm = document.getElementById('valuation-form');
+    valuationForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent the form from submitting normally
+        calculateValuation(); // Calculate and display the valuation
+    });
+   
+   </script>
+</body>
+</html>

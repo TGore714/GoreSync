@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Valuation - Goresync</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="C:\Users\tyler\index.html">Goresync</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="C:\Users\tyler\index.html"><button>Home</button></a></li>
+                <li><a href="C:\Users\tyler\listings.html"><button>Listings</button></a></li>
+                <li><a href="C:\Users\tyler\valuations.html"><button>Valuation</button></a></li>
+                <li><a href="C:\Users\tyler\about.html"><button>About</button></a></li>
+                <li><a href="C:\Users\tyler\contact.html"><button>Contact</button></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <button class="gtrbutton" id="electricBtn">Electric</button>
+    <button class="gtrbutton" id="acousticBtn">Acoustic</button>
+
+    
+    <section class="valuation-section">
+        <div class="container">
+            <h2>Guitar Listings</h2>
+            <div class="valuation-list" id="valuationList">
+                <!-- Guitar cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>all prices and listings are from the company websites.</p>
+    </footer>
+    
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const valuationData = [
+            { model: 'Fender Stratocaster', type: 'Electric', price: 1200 },
+            { model: 'Gibson Les Paul', type: 'Electric', price: 1800 },
+            { model: 'Taylor 814ce', type: 'Acoustic', price: 2500 },
+            { model: 'Taylor 224 DLX-LTD', type: 'Acoustic', price: 1700 },
+            { model: 'Taylor K24ce V-Class', type: 'Acoustic', price: 6000 },
+            { model: 'Taylor 414ce V-Class', type: 'Acoustic', price: 3000 },
+            { model: 'Fender American Vintage II', type: 'Electric', price: 2200 },
+            { model: 'Gibson SG Standard Maestro Vibrola', type: 'Electric', price: 2500 },
+        ];
+
+        const valuationList = document.getElementById('valuationList');
+        const electricBtn = document.getElementById('electricBtn');
+        const acousticBtn = document.getElementById('acousticBtn');
+
+        function displayGuitars(type) {
+            valuationList.innerHTML = '';
+
+            valuationData.filter(guitar => guitar.type === type).forEach(guitar => {
+                const guitarCard = document.createElement('div');
+                guitarCard.classList.add('guitar-card');
+
+                const modelHeading = document.createElement('h3');
+                modelHeading.textContent = guitar.model;
+
+                const priceParagraph = document.createElement('p');
+                priceParagraph.textContent = `Estimated Value: $${guitar.price}`;
+
+                guitarCard.appendChild(modelHeading);
+                guitarCard.appendChild(priceParagraph);
+
+                valuationList.appendChild(guitarCard);
+            });
+        }
+
+        electricBtn.addEventListener('click', function() {
+            displayGuitars('Electric');
+        });
+
+        acousticBtn.addEventListener('click', function() {
+            displayGuitars('Acoustic');
+        });
+
+        // Initial display (all guitars)
+        displayGuitars('Electric');
+        displayGuitars('Acoustic');
+    });
+
+  // Select the menu toggle button and navigation list
+  const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+// Add a click event listener to the menu toggle button
+menuToggle.addEventListener('click', function() {
+    navList.classList.toggle('active');
+});
+    </script>
+</body>
+</html>

@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>GoreSync Guitar Valuation</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <style>
-        body, h1, h2, h3, h4, h5 {
-            font-family: "Raleway", sans-serif;
-        }
-
-        body {
-            background-color: black;
-            border: 4px solid transparent; /* Add a transparent border around the body */
-            border-image: linear-gradient(45deg, yellow, black); /* Create a diagonal striped border using a linear gradient */
-            border-image-slice: 1; /* Ensure the entire border is filled with the gradient */
-        }
-
-        h1, h2 {
-            font-size: 36px; /* You can adjust the font size as needed */
-            color: white;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goresync - Your Ultimate Guitar Valuation Resource</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>This Website is Under Construction</h1>
-<h2>In the meantime, here is an image of a banana smoothie</h2>
-  <img src="https://fitfoodiefinds.com/wp-content/uploads/2019/03/banana-smoothie-sq-550x550.jpg" alt="image of banana smoothie">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="C:\Users\tyler\index.html">Goresync</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="C:\Users\tyler\index.html"><button>Home</button></a></li>
+                <li><a href="C:\Users\tyler\listings.html"><button>Listings</button></a></li>
+                <li><a href="C:\Users\tyler\valuations.html"><button>Valuation</button></a></li>
+                <li><a href="C:\Users\tyler\about.html"><button>About</button></a></li>
+                <li><a href="C:\Users\tyler\contact.html"><button>Contact</button></a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Goresync</h1>
+            <p>Your Ultimate Guitar Valuation Resource</p>
+            <a href="C:\Users\tyler\valuations.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Goresync.com. All rights reserved.</p>
+    </footer>
+    <script>
+        // Select the menu toggle button and navigation list
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+// Add a click event listener to the menu toggle button
+menuToggle.addEventListener('click', function() {
+    navList.classList.toggle('active');
+});
+    </script>
 </body>
 </html>

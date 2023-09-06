@@ -262,9 +262,14 @@ select option:hover {
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+   .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem; /* Adjust the vertical position as needed */
+    right: 1rem; /* Adjust the horizontal position as needed */
+    cursor: pointer;
+}
+
 
     .bar {
         width: 25px;

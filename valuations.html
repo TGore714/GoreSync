@@ -10,7 +10,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="C:\Users\tyler\index.html">Goresync</a>
+                <a href="index.html">Goresync</a> <!-- Removed the full file path -->
             </div>
             <div class="menu-toggle">
                 <div class="bar"></div>
@@ -29,75 +29,166 @@
 
     <section>
         <h1 class="value">Guitar Valuation Form</h1>
+        <h3>Note: The full guitar make and model name must be typed in completely and spelled correctly</h3>
         <form id="valuation-form">
-        <select id="guitar-type" name="guitar-type" required>
-            <option value="Electric">Electric</option>
-            <option value="Acoustic">Acoustic</option>
-        </select>
-        
-        <label for="guitar_make">Guitar Make:</label>
-        <input type="text" id="guitar_make" name="guitar_make" required><br><br>
-        
-        <label for="guitar_model">Guitar Model:</label>
-        <input type="text" id="guitar_model" name="guitar_model" required><br><br>
-        
-        <label for="guitar_year">Guitar Year:</label>
-        <input type="number" id="guitar_year" name="guitar_year" min="1900" max="2023" required><br><br>
-        
-        <label for="guitar_condition">Guitar Condition:</label>
-        <select id="guitar_condition" name="guitar_condition" required>
-            <option value="excellent">Excellent</option>
-            <option value="very_good">Very Good</option>
-            <option value="good">Good</option>
-            <option value="fair">Fair</option>
-            <option value="poor">Poor</option>
-        </select><br><br>
-        
-        
-        <input type="submit" value="Get Valuation">
-    </form>
-    <div id="valuation-result"></div>
-</section>
+            <select id="guitar-type" name="guitar-type" required>
+                <option value="Electric">Electric</option>
+                <option value="Acoustic">Acoustic</option>
+            </select>
+
+
+            <label for="guitar_model">Guitar Make & Model:</label>
+            <input type="text" id="guitar_model" name="guitar_model" required><br><br>
+
+            <label for="guitar_year">Guitar Year:</label>
+            <input type="number" id="guitar_year" name="guitar_year" min="1900" max="2023" required><br><br>
+
+            <label for="guitar_condition">Guitar Condition:</label>
+            <select id="guitar_condition" name="guitar_condition" required>
+                <option value="excellent">Excellent</option>
+                <option value="very_good">Very Good</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
+            </select><br><br>
+
+
+            <input type="submit" value="Get Valuation" onclick="calculateValuation(); return false;">
+
+        </form>
+        <div id="valuation-result"></div> <!-- result will be displayed here -->
+    </section>
 
     <footer>
         <p>&copy; 2023 Goresync.com. All rights reserved.</p>
     </footer>
     <script>
         // Select the menu toggle button and navigation list
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav-list');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        // Add a click event listener to the menu toggle button
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+        });
+
+
 
 // Add a click event listener to the menu toggle button
 menuToggle.addEventListener('click', function() {
     navList.classList.toggle('active');
 });
-   
-    // Function to calculate and display the valuation
-    function calculateValuation() {
-        // Get form input values
-        const guitarType = document.getElementById('guitar-type').value;
-        const guitarMake = document.getElementById('guitar_make').value;
-        const guitarModel = document.getElementById('guitar_model').value;
-        const guitarYear = parseInt(document.getElementById('guitar_year').value);
-        const guitarCondition = document.getElementById('guitar_condition').value;
 
-        // Calculate the valuation (replace this with correct valuation logic)
-        // This is just a placeholder calculation
-        const valuation = 500 + (guitarYear * 2);
+// Define an array of guitar objects with model, type, and price
+const guitars = [
+    { model: 'fender stratocaster', type: 'Electric', price: 1200 },
+    { model: 'gibson les paul', type: 'Electric', price: 1800 },
+    { model: 'taylor 814ce', type: 'Acoustic', price: 2500 },
+    { model: 'taylor 224 dlx-ltd', type: 'Acoustic', price: 1700 },
+    { model: 'taylor k24ce v-class', type: 'Acoustic', price: 6000 },
+    { model: 'taylor 414ce v-class', type: 'Acoustic', price: 3000 },
+    { model: 'fender american vintage ii', type: 'Electric', price: 2200 },
+    { model: 'gibson sg standard maestro vibrola', type: 'Electric', price: 2500 },
+    { model: 'martin d-28', type: 'Acoustic', price: 2800 },
+    { model: 'gibson j-45', type: 'Acoustic', price: 2300 },
+    { model: 'yamaha fg800', type: 'Acoustic', price: 200 },
+    { model: 'ibanez aw54', type: 'Acoustic', price: 300 },
+    { model: 'epiphone hummingbird', type: 'Acoustic', price: 350 },
+    { model: 'seagull s6 original', type: 'Acoustic', price: 400 },
+    { model: 'takamine gd20', type: 'Acoustic', price: 350 },
+    { model: 'fender cd-60s', type: 'Acoustic', price: 250 },
+    { model: 'taylor 214ce', type: 'Acoustic', price: 1200 },
+    { model: 'guild d-55', type: 'Acoustic', price: 4500 },
+    { model: 'gretsch g5022ce rancher', type: 'Acoustic', price: 700 },
+    { model: 'alvarez artist series ad30', type: 'Acoustic', price: 350 },
+    { model: 'cordoba c5', type: 'Acoustic', price: 300 },
+    { model: 'washburn wd10s', type: 'Acoustic', price: 200 },
+    { model: 'ovation celebrity standard', type: 'Acoustic', price: 450 },
+    { model: 'breedlove pursuit exotic concert ce', type: 'Acoustic', price: 800 },
+    { model: 'furch yellow gc-cr', type: 'Acoustic', price: 1700 },
+    { model: 'larrivée d-03', type: 'Acoustic', price: 1600 },
+    { model: 'eastman e10d', type: 'Acoustic', price: 1200 },
+    { model: 'gibson j-200', type: 'Acoustic', price: 5000 },
+    { model: 'prs custom 24', type: 'Electric', price: 3500 },
+    { model: 'epiphone les paul standard', type: 'Electric', price: 450 },
+    { model: 'jackson soloist sl2', type: 'Electric', price: 1600 },
+    { model: 'g&l legacy', type: 'Electric', price: 1400 },
+    { model: 'schecter hellraiser c-1', type: 'Electric', price: 900 },
+    { model: 'ibanez rg550', type: 'Electric', price: 1000 },
+    { model: 'gibson firebird', type: 'Electric', price: 2200 },
+    { model: 'fender american professional ii stratocaster', type: 'Electric', price: 1600 },
+    { model: 'esp ltd ec-1000', type: 'Electric', price: 1100 },
+    { model: 'charvel pro-mod dk24', type: 'Electric', price: 1300 },
+    { model: 'gibson explorer', type: 'Electric', price: 1800 },
+    { model: 'fender telecaster deluxe', type: 'Electric', price: 1600 },
+    { model: 'gretsch g2622 streamliner', type: 'Electric', price: 550 },
+    { model: 'music man majesty', type: 'Electric', price: 3000 },
+    { model: 'esp e-ii horizon', type: 'Electric', price: 1900 },
+    { model: 'jackson rr3 rhoads', type: 'Electric', price: 1000 },
+    { model: 'evh wolfgang standard', type: 'Electric', price: 1100 },
+    { model: 'ibanez s570', type: 'Electric', price: 800 },
+    { model: 'gibson sg standard', type: 'Electric', price: 1900 },
+    { model: 'fender jazzmaster', type: 'Electric', price: 1400 },
+    { model: 'seagull s6 original', type: 'Acoustic', price: 400 },
+];
 
+
+// Function to calculate and display the valuation
+function calculateValuation() {
+    // Get form input values
+    const guitarType = document.getElementById('guitar-type').value;
+    const guitarModel = document.getElementById('guitar_model').value.toLowerCase();
+    const guitarYear = parseInt(document.getElementById('guitar_year').value);
+    const guitarCondition = document.getElementById('guitar_condition').value;
+
+    // Construct a guitar object based on form input values
+    const selectedGuitar = {
+        model: guitarModel,
+        type: guitarType,
+        price: 0, // Initialize price as 0, you can set a default if needed
+    };
+
+    // Search for the guitar in the array by model (case-insensitive)
+    const foundGuitar = guitars.find(guitar => guitar.model.toLowerCase() === selectedGuitar.model);
+
+    if (foundGuitar) {
+        // Set the price of the selected guitar
+        selectedGuitar.price = foundGuitar.price;
+
+        // Define depreciation rates based on condition
+        const conditionDepreciationRates = {
+            excellent: 0,   // Adjust these rates as needed
+            very_good: 0.005,
+            good: 0.01,
+            fair: 0.02,
+            poor: 0.03,
+        };
+
+        // Get the depreciation rate based on the selected condition
+        const depreciationRate = conditionDepreciationRates[guitarCondition] || 0;
+
+        // Calculate depreciation based on the age of the guitar
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - guitarYear;
+        const depreciation = selectedGuitar.price * (depreciationRate * age);
+
+        // Apply depreciation to the price
+        selectedGuitar.price -= depreciation;
 
         // Display the valuation result
         const resultDiv = document.getElementById('valuation-result');
-        resultDiv.innerHTML = `<p>Your ${guitarType} guitar (${guitarMake} ${guitarModel}, ${guitarYear}, ${guitarCondition} condition) is valued at $${valuation}.</p>`;
+        resultDiv.innerHTML = `<p>Your ${selectedGuitar.type} guitar (${selectedGuitar.model}) is valued at $${selectedGuitar.price.toFixed(2)}.</p>`;
+    } else {
+        // Display an error message if the guitar model is not found
+        const resultDiv = document.getElementById('valuation-result');
+        resultDiv.innerHTML = `<p>Guitar model not found.</p>`;
     }
 
-    // Add a submit event listener to the form
-    const valuationForm = document.getElementById('valuation-form');
-    valuationForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent the form from submitting normally
-        calculateValuation(); // Calculate and display the valuation
-    });
-   
-   </script>
+    return false; // Prevent the default form submission
+}
+
+
+    </script>
 </body>
 </html>
+

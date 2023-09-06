@@ -283,7 +283,7 @@ select option:hover {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0; /* Change from left: 0; to right: 0; */
         width: 100%;
         background-color: #333;
         z-index: 1;

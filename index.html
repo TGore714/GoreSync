@@ -69,6 +69,24 @@ menuToggle.addEventListener('click', function() {
     });
 });
 
+        //logo loading image
+document.addEventListener("DOMContentLoaded", function () {
+  const logoContainer = document.getElementById("logo-container");
+  const menuItems = document.querySelectorAll("nav ul li a");
+
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default link behavior
+      logoContainer.style.display = "block"; // Show the logo container
+
+      setTimeout(() => {
+        // Delay to display the logo for a brief moment
+        const link = menuItem.getAttribute("href");
+        window.location.href = link; // Navigate to the clicked link
+      }, 1000); // Adjust the delay time as needed
+    });
+  });
+});
     </script>
 </body>
 </html>

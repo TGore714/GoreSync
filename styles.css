@@ -16,10 +16,7 @@ body {
   left: 0;
   padding: 20px; /* Adjust as needed */
   z-index: 1000; /* Adjust the z-index if necessary */
-  width: 100px;
-  height: 100px;
 }
-
 
 .popup-container {
     display: flex;
